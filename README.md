@@ -1,2 +1,2 @@
 # uork-golang-api
-An simple Go Lang Uork API
+The use of the Uork API implemented for Go Lang
