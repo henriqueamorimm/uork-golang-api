@@ -8,9 +8,8 @@ import (
 	"strings"
 )
 
-
-const apiKey = 'api_key';
-const apiURL = `https://uork.org/search/status/check-account.php?apikey=${apiKey}&id=`;
+const apiKey = "apiKey"
+const apiURL = "https://uork.org/search/status/check-account.php?apikey=%s&id="
 
 func getUserInput(quest string) (string, error) {
 	fmt.Print(quest)
@@ -29,7 +28,7 @@ func main() {
 		return
 	}
 
-	apiEndpoint := apiURL + userInput
+	apiEndpoint := fmt.Sprintf(apiURL, apiKey) + userInput
 
 	resp, err := http.Get(apiEndpoint)
 	if err != nil {
