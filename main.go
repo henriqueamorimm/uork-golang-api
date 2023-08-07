@@ -8,7 +8,9 @@ import (
 	"strings"
 )
 
-const apiURL = "https://uork.org/search/status/check-account.php?id="
+
+const apiKey = 'api_key';
+const apiURL = `https://uork.org/search/status/check-account.php?apikey=${apiKey}&id=`;
 
 func getUserInput(quest string) (string, error) {
 	fmt.Print(quest)
